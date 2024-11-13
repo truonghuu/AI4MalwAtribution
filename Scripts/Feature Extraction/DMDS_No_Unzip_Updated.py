@@ -10,6 +10,7 @@ import requests
 
 import zipfile
 import time
+import argparse
 '''
 Run in directory with 2 folders. /Malicious Reports and /Benign Reports. all the cuckoo sandbox reports.
 Reads all the .json files in the directory, does feature extraction on them 
@@ -19,7 +20,11 @@ e.g report1.json will output report1.npy
 
 '''
 # Update to Zipped files path accordingly.
-PATH = "/media/khan/CH SSD/42k_benign_dataset_reports.zip"
+parser = argparse.ArgumentParser()
+parser.add_argument('p', help="Path to Zipped file with Cuckoo reports inside")
+args = parser.parse_args()
+PATH = args.p
+# PATH = "/media/khan/CH SSD/42k_benign_dataset_reports.zip"
 
 class FeatureType(object):
     ''' Base class from which each feature type may inherit '''

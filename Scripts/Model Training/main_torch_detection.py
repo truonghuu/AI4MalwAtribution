@@ -19,7 +19,6 @@ from sklearn.model_selection import cross_val_score, cross_validate
 import random
 import pickle
 
-# TACTIC = "Impact"
 
 #logging.getLogger('matplotlib.font_manager').disabled = True
 start_time = datetime.now().strftime("%Y%m%d-%H%M%S")
@@ -138,11 +137,6 @@ def load_data(fold, model):
         y_train = np.concatenate((a2,b2,c2,d2),axis=0)
     print("Done")
     print(X_train.shape)
-            
-                
-    #Work ends here
-    # X_test, y_test = np.load(f'./x_test.npy'.format(fold)), np.load(f'./y_test.npy')
-    # X_train, y_train = np.load(f'./x_train.npy'.format(fold)), np.load(f'./y_train.npy')
     
     
     if model == 'XGBC':
