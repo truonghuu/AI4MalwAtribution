@@ -20,9 +20,8 @@ scripts/
 │       ├── [TA0001] Initial Access/     # .npy files for TA0001 (Initial Access)  
 │       └── NO [TA0001] Initial Access/  # .npy files excluding TA0001  
 ├── Training Data Generation  
-│   ├── Train_Data_Gen.py                # Script for generating training data (set paths inside)  
-│   ├── Train_Data_Gen_Tactic2.py        # Generates data for Tactic 2 (set paths inside)  
-│   └── Train_Data_Gen_Tactic3.py        # Generates data for Tactic 3 (set paths inside)  
+│   ├── Generate Detection Training Data.py      # Generate Training Data For Detection  
+│   └── Generate Tactics Training Data.py        # Generate Training Data For Tactic
 ├── Model Training  
 │   ├── Main.py                          # Main entry script for model training  
 │   ├── main_torch_detection.py          # Detection model training using PyTorch  
