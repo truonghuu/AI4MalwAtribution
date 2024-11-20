@@ -23,9 +23,25 @@
             margin-bottom: 10px;
         }
 
-        .filename {
+        .filename a {
+            text-decoration: none;
             color: #007bff;
-            font-weight: bold;
+        }
+
+        .filename a:hover {
+            text-decoration: underline;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem !important;
+        }
+
+        .text-dark {
+            color: #212529 !important;
         }
 
         .label {
@@ -68,16 +84,28 @@
         .card-text strong {
             color: #495057;
         }
+
+        .badge {
+            padding: 0.5em 1em;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1>Analysis of</h1>
-        <h5 class="filename">{{filename}}</h5>
-        <h5 class="label text-{{label_color}}">{{label}}</h5>
-        
-        <!-- Malware Detection Card -->
+        <div class="text-center mb-4">
+            <h1 class="fw-bold text-dark">Analysis of</h1>
+            <h4 class="filename">
+                <a href="#" class="text-primary text-decoration-none">{{filename}}</a>
+            </h4>
+            <span class="badge {{ 'bg-danger' if label == 'Malicious' else 'bg-success' }} fs-5">{{label}}</span>
+        </div>
+
+        <!-- Malware Detection -->
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Malware Detection</h3>
@@ -87,7 +115,7 @@
             </div>
         </div>
 
-        <!-- Tactics Attribution Card -->
+        <!-- Tactics Attribution -->
         <div class="card">
             <div class="card-header">
                 <h3 class="card-title">Tactics Attribution</h3>
