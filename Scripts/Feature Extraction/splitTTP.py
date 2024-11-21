@@ -7,7 +7,7 @@ import time
 PATH = "E:\\"
 
 DEFAULT_FOLDER = PATH + 'malNpy' # Name of Folder containing Malicious Npys
-SAVE_FOLDER = 'sortedNpy' # Name of Folder to contain all the different TTP categories
+SAVE_FOLDER = 'Sorted Npy' # Name of Folder to contain all the different TTP categories
 
 # DONT TOUCH THIS, BASED ON dataframe.csv
 TTP_NAMES = ["[TA0001] Initial Access","[TA0002] Execution","[TA0003] Persistence","[TA0004] Privilege Escalation","[TA0005] Defense Evasion","[TA0006] Credential Access","[TA0007] Discovery","[TA0008] Lateral Movement","[TA0009] Collection","[TA0010] Exfiltration","[TA0011] Command and Control","[TA0034] Impact","[TA0040] Impact","[TA0043] Reconnaissance"]
